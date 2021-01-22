@@ -1,0 +1,25 @@
+{
+  "name": "vul-website",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "build:css": "npx tailwindcss build ./public/stylesheets/tailwind.css -o ./public/stylesheets/style.css"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.2.3",
+    "axios": "^0.21.1",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "jquery": "^3.5.1",
+    "jsdom": "^16.4.0",
+    "morgan": "~1.9.1",
+    "mysql": "^2.18.1",
+    "postcss": "^8.2.4"
+  },
+  "devDependencies": {
+    "tailwindcss": "^2.0.2"
+  }
+}
