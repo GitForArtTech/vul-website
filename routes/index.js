@@ -26,22 +26,26 @@ router.post("/api/login", async (req, res) => {
 //正常登入SQL injection Login api
 router.post("/api/injectlogin", async (req, res) => {
   const findAdmin =
-      "select message from sqlInjection where password = '" +
-      req.body.password +
-      "'" +
-      " and name = '" +
-      req.body.name +
-      "'";
+    "select id,name,message from sqlInjection where password = '" +
+    req.body.password +
+    "'" +
+    " and name = '" +
+    req.body.name +
+    "'";
   await db.query(findAdmin, (err, result) => {
     if (err) throw err;
     if (result.length === 0) {
       res.status(200).send(false);
     } else {
+      let id = [];
+      let name = [];
       let message = [];
       for (let i = 0; i < result.length; i++) {
+        id.push(result[i].id);
+        name.push(result[i].name);
         message.push(result[i].message);
       }
-      res.status(200).json({ message: message });
+      res.status(200).json({ id: id, name: name, message: message });
     }
   });
 });

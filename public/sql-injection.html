@@ -248,13 +248,19 @@
                         class="w-2/5 md:my-3 border-2  font-semibold rounded-lg border-gray-800 hover:bg-gray-800 hover:text-white"
                         onclick="clickInjectBtn()"
                 >
-                    Injection
+                Login
                 </button>
             </div>
             <!-- </form>ml-24 w-full bg-gray-800 text-white -->
         </div>
         <div class="w-full mt-7 justify-center text-center">
-            <span class="w-full text-2xl text-gray-800">message</span>
+            <span class="w-full text-2xl text-gray-800">登入者資訊</span>
+            <button
+                        class="w-1/4 ml-2 md:my-3 border-2  font-semibold rounded-lg border-gray-800 hover:bg-gray-800 hover:text-white"
+                        onclick="cleanBtn()"
+                >
+                清除資料
+                </button>
             <textarea
                     name="msg"
                     id="msg"
@@ -268,15 +274,13 @@
                 class="md:w-4/5  md:h-64 border-4 border-gray-800 border-opacity-75 inline-block Segoe UI rounded-3xl shadow-lg pb-3 p-3"
         >
             <h3 class="text-2xl text-center md:mb-3">SQL Injection頁面說明</h3>
-            <span class="text-lg text-left"
+            <!-- <span class="text-lg text-left"
             >Login button :
             <br />為正常登入使用，輸入任一帳號，顯示出對應的message
-          </span>
-            <br />
-            <br />
+          </span> -->
             <span class="text-lg text-left"
-            >Injection button : <br />為SQL
-            injection登入使用，輸入任一帳號或是「 ' or '1' =
+            >Login Button: <br /><br />為SQL
+            injection登入使用，輸入任一帳號或是<br /><br />「 ' or '1' =
             '1」（密碼也可以），顯示所有帳號的message。
           </span>
         </div>
@@ -302,7 +306,7 @@
                 </th>
             </tr>
             </thead>
-            <tbody>
+            <tbody class="overflow-y-scroll md:overflow-scroll" style="height: 50vh;">
             <tr class="lg:hover:bg-gray-100 border-gray-800">
                 <td
                         class="w-full lg:w-auto p-3 border-gray-800 text-gray-800 text-center border-2 border-b block lg:table-cell relative lg:static"
@@ -361,6 +365,66 @@
                 >message</span
                 >
                     This is message for gss
+                </td>
+            </tr>
+            <tr class="lg:hover:bg-gray-100 border-gray-800">
+                <td
+                        class="w-full lg:w-auto p-3 border-gray-800 text-gray-800 text-center border-2 border-b block lg:table-cell relative lg:static"
+                >
+                <span
+                        class="lg:hidden absolute top-0 left-0 px-2 py-1 text-xs font-bold uppercase"
+                >name</span
+                >
+                    helen
+                </td>
+                <td
+                        class="w-full lg:w-auto p-3 border-gray-800 text-gray-800 text-center border-2 border-b block lg:table-cell relative lg:static"
+                >
+                <span
+                        class="lg:hidden absolute top-0 left-0 px-2 py-1 text-xs font-bold uppercase"
+                >password</span
+                >
+                    helen123
+                </td>
+
+                <td
+                        class="w-full lg:w-auto p-3 border-gray-800 text-gray-800 text-center border-2 border-b block lg:table-cell relative lg:static"
+                >
+                <span
+                        class="lg:hidden absolute top-0 left-0 px-2 py-1 text-xs font-bold uppercase"
+                >message</span
+                >
+                    This is message for helen
+                </td>
+            </tr>
+            <tr class="lg:hover:bg-gray-100 border-gray-800">
+                <td
+                        class="w-full lg:w-auto p-3 border-gray-800 text-gray-800 text-center border-2 border-b block lg:table-cell relative lg:static"
+                >
+                <span
+                        class="lg:hidden absolute top-0 left-0 px-2 py-1 text-xs font-bold uppercase"
+                >name</span
+                >
+                        dlwlrma
+                </td>
+                <td
+                        class="w-full lg:w-auto p-3 border-gray-800 text-gray-800 text-center border-2 border-b block lg:table-cell relative lg:static"
+                >
+                <span
+                        class="lg:hidden absolute top-0 left-0 px-2 py-1 text-xs font-bold uppercase"
+                >password</span
+                >
+                dlwlrma123
+                </td>
+
+                <td
+                        class="w-full lg:w-auto p-3 border-gray-800 text-gray-800 text-center border-2 border-b block lg:table-cell relative lg:static"
+                >
+                <span
+                        class="lg:hidden absolute top-0 left-0 px-2 py-1 text-xs font-bold uppercase"
+                >message</span
+                >
+                    This is message for dlwlrma
                 </td>
             </tr>
             </tbody>
